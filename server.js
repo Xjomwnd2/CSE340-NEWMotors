@@ -10,11 +10,14 @@ const env = require("dotenv").config();
 const app = express();
 const static = require("./routes/static");
 
+
+
+/* ********************************************************* */
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
 // Set the views directory (optional, if not using the default)
 app.set('views', path.join(__dirname, 'views'));
-
+/* *********************************************************** */
 
 
 /* ***********************
@@ -26,6 +29,16 @@ app.use(static);
 app.get("/", function(req, res){
   res.render("index", {title: "Home"});
 });
+
+
+
+/* ************************************************
+Validation Middleware
+************************************************* */
+
+
+
+
 /* ***********************
  * Local Server Information
  * Values from .env (environment) file
