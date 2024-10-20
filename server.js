@@ -16,7 +16,7 @@ const static = require("./routes/static");
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
 // Set the views directory (optional, if not using the default)
-app.set('views', path.join(__dirname, 'views'));
+/*app.set('views', path.join(__dirname, 'views'));
 /* *********************************************************** */
 
 
