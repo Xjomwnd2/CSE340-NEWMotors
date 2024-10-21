@@ -31,3 +31,23 @@ app.get("/", baseController.buildHome);
 // Inventory routes
 app.use("/inv", inventoryRoute)
 
+/* ***********************
+ * Local Server Information
+ * Values from .env (environment) file
+ *************************/
+const port = process.env.PORT || 5500; // Fallback port if not defined
+const host = process.env.HOST || 'localhost'; // Fallback host if not defined
+/* ***********************
+ * Express Error Handler
+ * Place after all other middleware
+ *************************/
+
+
+
+/* ***********************
+ * Log statement to confirm server operation
+ *************************/
+app.listen(port, () => {
+    console.log(`App listening on ${host}:${port}`);
+  });
+  
